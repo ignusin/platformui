@@ -1,0 +1,55 @@
+input[type=button].PlatformUI-Button,
+input[type=submit].PlatformUI-Button,
+a.PlatformUI-Button {
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+
+    margin: 1px 2px 1px 2px;
+    padding: 3px 8px 3px 8px;
+    border: 1px solid #727272;
+    background-color: #ffffff;
+    border-radius: 3px;
+
+    background-image: linear-gradient(to bottom, #eaeaea 0%, #acacac 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaeaea', EndColorStr='#acacac')"; /* IE8 */
+
+    outline-width: 0;
+    color: black; 
+    text-decoration: none;   
+}
+
+input[type=button].PlatformUI-Button.Over,
+input[type=submit].PlatformUI-Button.Over,
+a.PlatformUI-Button.Over {
+    border: 1px solid #727272;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+input[type=button].PlatformUI-Button.Pushed,
+input[type=submit].PlatformUI-Button.Pushed,
+a.PlatformUI-Button.Pushed {
+    background-color: #525252;
+    color: white;
+    border: none;
+    border: 1px solid #525252;
+
+    background-image: linear-gradient(to bottom, #acacac 0%, #525252 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#acacac', EndColorStr='#525252')"; /* IE8 */
+
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+
+input[type=button].PlatformUI-Button.Disabled,
+input[type=submit].PlatformUI-Button.Disabled,
+a.PlatformUI-Button.Disabled {
+    cursor: default;
+    background-color: #eaeaea;
+    color: #acacac;
+    border: none;
+    border: 1px solid #acacac;
+
+    background-image: linear-gradient(to bottom, #eaeaea 0%, #cacaca 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaeaea', EndColorStr='#cacaca')"; /* IE8 */
+}

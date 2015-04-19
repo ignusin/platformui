@@ -1,0 +1,29 @@
+﻿.PlatformUI-ItemsList {
+    display: block;
+    border: 1px solid #eaeaea;
+    padding: 1px;
+}
+
+.PlatformUI-ItemsList a.Item {
+    display: block;
+    padding: 5px;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.PlatformUI-ItemsList a.Item.Selected {
+    background-color: #eaeaea;
+}
+
+.PlatformUI-ItemsList a.Item.Highlighted {
+    background-color: #727272;
+}
+
+.PlatformUI-ItemsList a.Item.Highlighted * {
+    color: white !important;
+}
+
+.PlatformUI-DropDown-Popup .PlatformUI-ItemsList {
+    margin: -10px;
+    border: none;
+}

@@ -1,0 +1,53 @@
+.PlatformUI-Filter {
+    
+}
+
+.PlatformUI-Filter > .NoFilterLabel {
+    margin: 3px;
+    font-color: #eaeaea;
+    font-size: 0.8em;
+}
+
+.PlatformUI-Filter > .Items > .Item table {
+    width: 100%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Remove {
+    width: 16px;
+    height: 16px;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Field {
+    width: 33%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Field > select {
+    width: 100%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Operation {
+    width: 33%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Operation > select {
+    width: 100%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Value {
+    width: 33%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Value > input.DummyValue {
+    width: 100%;
+}
+
+.PlatformUI-Filter > .Items > .Item td.Value input.InputField {
+    width: 100%;
+}
+
+.PlatformUI-Filter > .Items > .Item a.RemoveButton {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('icons/remove.png');
+}

@@ -1,0 +1,56 @@
+div.PlatformUI-Breadcrumb
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #525252;
+    padding: 5px 0 5px 0;
+    
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff', endColorStr='#f0f0f0')";
+}
+
+div.PlatformUI-Breadcrumb span.Root
+{
+    padding: 5px 10px 5px 10px;
+    
+    background-color: #525252;
+    background-image: linear-gradient(to bottom, #525252 0%, #424242 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#525252', endColorStr='#424242')";
+
+    color: white;
+}
+
+div.PlatformUI-Breadcrumb span.Root a
+{
+    color: white;
+}
+
+div.PlatformUI-Breadcrumb span.Root.Selected a
+{
+    color: lightgreen;
+}
+
+div.PlatformUI-Breadcrumb span.Item span.Next
+{
+    background-image: url('icons/breadcrumb_next.png');
+    width: 16px;
+    height: 13px;
+    display: inline-block;
+    margin-top: -1px;
+}
+
+div.PlatformUI-Breadcrumb span.Item
+{
+    padding: 5px 10px 5px 10px;
+}
+
+div.PlatformUI-Breadcrumb span.Item a
+{
+    color: black;
+}
+
+div.PlatformUI-Breadcrumb span.Item.Selected a
+{
+    color: green;
+}

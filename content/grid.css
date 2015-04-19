@@ -1,0 +1,43 @@
+table.PlatformUI-Grid {
+    border-collapse: collapse;
+}
+
+table.PlatformUI-Grid th {
+    background-image: linear-gradient(to bottom, #EEE9E9 0%, #CDC9C9 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#EEE9E9', EndColorStr='#CDC9C9')"; /* IE8 */
+    
+    background-color: #CDC9C9;
+    color: black;
+    padding: 5px;
+    border-left: 1px solid #C4C4C4;
+    border-right: 1px solid #C4C4C4;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    font-weight: normal;
+}
+
+table.PlatformUI-Grid th a {
+    color: black;
+}
+
+
+table.PlatformUI-Grid th a.SortAsc div.SortIcon {
+    background-image: url('icons/sort-asc.png');
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+table.PlatformUI-Grid th a.SortDesc div.SortIcon {
+    background-image: url('icons/sort-desc.png');
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+table.PlatformUI-Grid td {
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+}

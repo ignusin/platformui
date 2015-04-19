@@ -1,0 +1,13 @@
+.PlatformUI-Pager {
+    margin: 5px;
+}
+
+.PlatformUI-Pager > .PlatformUI-Page {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.PlatformUI-Pager > .PlatformUI-Page.PlatformUI-Selected {
+    font-weight: bold;
+    color: red;
+}

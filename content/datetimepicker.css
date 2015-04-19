@@ -1,0 +1,21 @@
+﻿.PlatformUI-TimePickerSeparator {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.PlatformUI-TimePickerItem {
+    padding-left: 10px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.PlatformUI-TimePickerDisplayItem {
+    width: 30px;
+    text-align: center;
+}
+
+.PlatformUI-DateTimePicker-Separator {
+    display: inline-block;
+    width: 50px;
+}

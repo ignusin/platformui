@@ -1,0 +1,59 @@
+﻿.PlatformUI-Calendar {
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header {
+    padding: 5px;
+    background-color: #eaeaea;
+
+    border-top: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header > a.PlatformUI-PrevYearButton, 
+.PlatformUI-Calendar > div.PlatformUI-Header > a.PlatformUI-NextYearButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #525252;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header > span.PlatformUI-YearLabel {
+    color: #525252;
+    font-weight: bold;
+    cursor: default;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView {
+    border-collapse: collapse;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > thead > tr > th,
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td {
+    border-collapse: collapse;
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    cursor: default;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > thead > tr > th {
+    font-weight: bold;
+    color: #525252;
+    text-align: center;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td {
+    text-align: right;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td.PlatformUI-Selected {
+    background-color: #cc0000;
+    color: white;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td.PlatformUI-Inactive {
+    background-color: #f0f0f0;
+}

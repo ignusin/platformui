@@ -1,0 +1,54 @@
+table.PlatformUI-FlatTreeGrid {
+    border-collapse: collapse;
+}
+
+table.PlatformUI-FlatTreeGrid th {
+    background-image: linear-gradient(to bottom, #EEE9E9 0%, #CDC9C9 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#EEE9E9', EndColorStr='#CDC9C9')"; /* IE8 */
+    
+    background-color: #CDC9C9;
+    color: black;
+    padding: 5px;
+    border-left: 1px solid #C4C4C4;
+    border-right: 1px solid #C4C4C4;
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    font-weight: normal;
+}
+
+table.PlatformUI-FlatTreeGrid th a {
+    color: black;
+}
+
+table.PlatformUI-FlatTreeGrid tr.HierarchyRow {
+    background-color: #f0f0e6;
+}
+
+table.PlatformUI-FlatTreeGrid td.UpIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url('icons/flattreegrid_up.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+table.PlatformUI-FlatTreeGrid th a.SortAsc div.SortIcon {
+    background-image: url('icons/sort-asc.png');
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+table.PlatformUI-FlatTreeGrid th a.SortDesc div.SortIcon {
+    background-image: url('icons/sort-desc.png');
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+table.PlatformUI-FlatTreeGrid td {
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+}

@@ -1,0 +1,12 @@
+.PlatformUI-Control {
+    font-family: Tahoma, Verdana;
+    font-size: 12px !important;
+}
+
+.PlatformUI-Control a {
+    color: #323232;
+}
+
+.PlatformUI-Control a img {
+    border: 0;
+}

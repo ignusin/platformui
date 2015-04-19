@@ -1,0 +1,383 @@
+.PlatformUI-Control {
+    font-family: Tahoma, Verdana;
+    font-size: 12px !important;
+}
+
+.PlatformUI-Control a {
+    color: #323232;
+}
+
+.PlatformUI-Control a img {
+    border: 0;
+}
+input[type=button].PlatformUI-Button,
+input[type=submit].PlatformUI-Button,
+a.PlatformUI-Button {
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+
+    margin: 1px 2px 1px 2px;
+    padding: 3px 8px 3px 8px;
+    border: 1px solid #727272;
+    background-color: #ffffff;
+    border-radius: 3px;
+
+    background-image: linear-gradient(to bottom, #eaeaea 0%, #acacac 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaeaea', EndColorStr='#acacac')"; /* IE8 */
+
+    outline-width: 0;
+    color: black; 
+    text-decoration: none;   
+}
+
+input[type=button].PlatformUI-Button.Over,
+input[type=submit].PlatformUI-Button.Over,
+a.PlatformUI-Button.Over {
+    border: 1px solid #727272;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+input[type=button].PlatformUI-Button.Pushed,
+input[type=submit].PlatformUI-Button.Pushed,
+a.PlatformUI-Button.Pushed {
+    background-color: #525252;
+    color: white;
+    border: none;
+    border: 1px solid #525252;
+
+    background-image: linear-gradient(to bottom, #acacac 0%, #525252 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#acacac', EndColorStr='#525252')"; /* IE8 */
+
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+
+input[type=button].PlatformUI-Button.Disabled,
+input[type=submit].PlatformUI-Button.Disabled,
+a.PlatformUI-Button.Disabled {
+    cursor: default;
+    background-color: #eaeaea;
+    color: #acacac;
+    border: none;
+    border: 1px solid #acacac;
+
+    background-image: linear-gradient(to bottom, #eaeaea 0%, #cacaca 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaeaea', EndColorStr='#cacaca')"; /* IE8 */
+}
+﻿.PlatformUI-Calendar {
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header {
+    padding: 5px;
+    background-color: #eaeaea;
+
+    border-top: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header > a.PlatformUI-PrevYearButton, 
+.PlatformUI-Calendar > div.PlatformUI-Header > a.PlatformUI-NextYearButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #525252;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Header > span.PlatformUI-YearLabel {
+    color: #525252;
+    font-weight: bold;
+    cursor: default;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView {
+    border-collapse: collapse;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > thead > tr > th,
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td {
+    border-collapse: collapse;
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    cursor: default;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > thead > tr > th {
+    font-weight: bold;
+    color: #525252;
+    text-align: center;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td {
+    text-align: right;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td.PlatformUI-Selected {
+    background-color: #cc0000;
+    color: white;
+}
+
+.PlatformUI-Calendar > div.PlatformUI-Body > table.PlatformUI-MonthView > tbody > tr > td.PlatformUI-Inactive {
+    background-color: #f0f0f0;
+}﻿.PlatformUI-TimePickerSeparator {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.PlatformUI-TimePickerItem {
+    padding-left: 10px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.PlatformUI-TimePickerDisplayItem {
+    width: 30px;
+    text-align: center;
+}
+
+.PlatformUI-DateTimePicker-Separator {
+    display: inline-block;
+    width: 50px;
+}.PlatformUI-Dialog {
+}
+
+.PlatformUI-Dialog .Background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0.7;
+    filter: alpha(Opacity=50);
+}
+
+.PlatformUI-Dialog .Dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;    
+    border: 1px solid #525252;
+    
+    box-shadow: 0px 0px 3px 0px #525252;
+}
+
+.PlatformUI-Dialog .Dialog h1 {
+    background-color: #525252;
+    background-image: linear-gradient(to bottom, #525252 0%, #424242 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#525252', endColorStr='#424242')";
+
+    color: white;
+    
+    font-size: 1em;
+    padding: 5px;
+    margin: 0;
+}
+
+.PlatformUI-Dialog .Dialog .Container {
+    padding: 5px;
+    border-bottom: 1px solid #cacaca;
+    
+    background-color: white;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff', endColorStr='#f0f0f0')";
+}
+
+.PlatformUI-Dialog .Dialog .CommandPanel {
+    padding: 5px;
+    border-top: 1px solid #f8f8f8;
+    
+    background-color: #eaeaea;
+    background-image: linear-gradient(to bottom, #eaeaea 0%, #cacaca 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#eaeaea', endColorStr='#cacaca')";
+    
+    text-align: right;
+    
+    text-wrap: none;
+}
+
+.PlatformUI-Dialog .Dialog .CommandPanel .PlatformUI-Button {
+    min-width: 100px;
+}
+﻿.PlatformUI-DropDown-Button {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #adadad;
+    background-color: #eaeaea;
+    color: black;
+    outline-width: 0;
+}
+
+.PlatformUI-DropDown-Button.Selected {
+    background-color: #525252;
+    color: white;
+    border: 2px solid #525252;
+
+    -webkit-box-shadow: 0px 0px 5px 0px #525252;
+    -moz-box-shadow: 0px 0px 5px 0px #525252;
+    box-shadow: 0px 0px 5px 0px #525252;
+}
+
+a.PlatformUI-DropDown-Button.Disabled, a.PlatformUI-DropDown-Button.Disabled:hover {
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    color: #eaeaea !important;
+}
+
+.PlatformUI-DropDown-Popup {
+    padding: 10px;
+    border: 2px solid #525252;
+    background-color: white;
+
+    -webkit-box-shadow: 0px 0px 5px 0px #525252;
+    -moz-box-shadow: 0px 0px 5px 0px #525252;
+    box-shadow: 0px 0px 5px 0px #525252;
+}
+table.PlatformUI-Grid {
+    border-collapse: collapse;
+}
+
+table.PlatformUI-Grid th {
+    background-color: #525252;
+    color: white;
+    padding: 5px;
+    border-left: 1px solid #525252;
+    border-right: 1px solid #525252;
+    border-top: 3px solid #424242;
+    border-bottom: 3px solid #424242;
+}
+
+table.PlatformUI-Grid th a {
+    color: white;
+}
+
+
+table.PlatformUI-Grid td {
+    padding: 5px;
+    border: 1px solid #eaeaea;
+}﻿.PlatformUI-ItemsList {
+    display: block;
+    border: 1px solid #eaeaea;
+    padding: 1px;
+}
+
+.PlatformUI-ItemsList a.Item {
+    display: block;
+    padding: 5px;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.PlatformUI-ItemsList a.Item.Selected {
+    background-color: #eaeaea;
+}
+
+.PlatformUI-ItemsList a.Item.Highlighted {
+    background-color: #727272;
+}
+
+.PlatformUI-ItemsList a.Item.Highlighted * {
+    color: white !important;
+}
+
+.PlatformUI-DropDown-Popup .PlatformUI-ItemsList {
+    margin: -10px;
+    border: none;
+}.PlatformUI-Pager {
+    margin: 5px;
+}
+
+.PlatformUI-Pager > .PlatformUI-Page {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.PlatformUI-Pager > .PlatformUI-Page.PlatformUI-Selected {
+    font-weight: bold;
+    color: red;
+}.PlatformUI-TabContainer {
+    margin-top: 10px;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li {
+    float: left;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li:last-child {
+    float: none;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li > a {
+    padding: 5px 15px 5px 15px;
+    border-left: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background-color: #eaeaea;
+
+    outline-width: 0;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li:last-child > a {
+    border-right: 1px solid #dadada;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li.PlatformUI-Selected > a {
+    background-color: #525252;
+    border-left: 1px solid #525252;
+    border-top: 1px solid #525252;
+    border-bottom: 1px solid #525252;
+    color: white;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li.PlatformUI-Selected:last-child > a {
+    border-right: 1px solid #525252;
+}
+
+.PlatformUI-TabContainer > div.PlatformUI-TabBody {
+    margin-top: 5px;
+    display: block;
+    border: 1px solid #dadada;
+    padding: 5px;
+    background-color: white;
+}
+.PlatformUI-FieldValidator,
+.PlatformUI-ElementValidator {
+    padding: 3px;
+    
+    background-color: #cc0000;
+    background-image: linear-gradient(to bottom, #cc0000 0%, #a80000 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#cc0000', endColorStr='#a80000')";
+    
+    color: white;
+    font-weight: bold;
+    border: 1px solid #990000;
+
+    box-shadow: 0px 0px 10px 0px #aaa;
+}
+.PlatformUI-WaitArea {
+    color: black;
+    padding: 10px;
+    border: 3px solid #525252;
+    background-color: white;
+
+    -webkit-box-shadow: 0px 0px 10px 0px #aaa;
+    -moz-box-shadow: 0px 0px 10px 0px #aaa;
+    box-shadow: 0px 0px 10px 0px #aaa;
+}
+
+.PlatformUI-WaitArea-Background {
+    background: white;
+    opacity: 0.7;
+    filter: alpha(Opacity=50);
+}

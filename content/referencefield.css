@@ -1,0 +1,21 @@
+.PlatformUI-ReferenceField
+{
+}
+
+.PlatformUI-ReferenceField .Input
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.PlatformUI-ReferenceField .ChooseButton
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.PlatformUI-ReferenceField .CancelButton
+{
+    display: inline-block;
+    vertical-align: middle;
+}

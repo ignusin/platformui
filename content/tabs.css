@@ -1,0 +1,51 @@
+.PlatformUI-TabContainer {
+    margin-top: 10px;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li {
+    float: left;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li:last-child {
+    float: none;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li > a {
+    padding: 5px 15px 5px 15px;
+    border-left: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background-color: #eaeaea;
+
+    outline-width: 0;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li:last-child > a {
+    border-right: 1px solid #dadada;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li.PlatformUI-Selected > a {
+    background-color: #525252;
+    border-left: 1px solid #525252;
+    border-top: 1px solid #525252;
+    border-bottom: 1px solid #525252;
+    color: white;
+}
+
+.PlatformUI-TabContainer > ul.PlatformUI-TabStrip > li.PlatformUI-Selected:last-child > a {
+    border-right: 1px solid #525252;
+}
+
+.PlatformUI-TabContainer > div.PlatformUI-TabBody {
+    margin-top: 5px;
+    display: block;
+    border: 1px solid #dadada;
+    padding: 5px;
+    background-color: white;
+}
