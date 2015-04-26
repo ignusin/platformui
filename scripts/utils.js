@@ -150,14 +150,14 @@
     };
 
     ns.parseDateTime = function (value) {
-        //01234567890123456789
-        //dd.MM.yyyy, HH:mm:ss
+        //0123456789012345678
+        //dd.MM.yyyy HH:mm:ss
         var day = parseInt(value.substr(0, 2));
         var month = parseInt(value.substr(3, 2));
         var year = parseInt(value.substr(6, 4));
-        var hour = parseInt(value.substr(12, 2));
-        var minute = parseInt(value.substr(15, 2));
-        var second = parseInt(value.substr(18, 2));
+        var hour = parseInt(value.substr(11, 2));
+        var minute = parseInt(value.substr(14, 2));
+        var second = parseInt(value.substr(17, 2));
 
         var date = new Date(year, month - 1, day, hour, minute, second);
         return date;

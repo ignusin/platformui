@@ -39,10 +39,10 @@
 
             _this._isEnabled = true;
 
-            _this._buttonEl = $('<a href="javascript:void(0)" class="ns-DropDown-Button"></a>');
+            _this._buttonEl = $('<a href="javascript:void(0)" class="PlatformUI-DropDown-Button"></a>');
             _this._el.append(_this._buttonEl);
 
-            _this._dropContainerEl = $('<div class="ns-DropDown-Popup" style="display:none"></div>');
+            _this._dropContainerEl = $('<div class="PlatformUI-DropDown-Popup" style="display:none"></div>');
 
             if (_this._dropEl)
                 _this._dropContainerEl.append(_this._dropEl);

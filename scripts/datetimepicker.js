@@ -12,7 +12,8 @@
         this._dropDown = null;
 
         this._events = {
-            selectedDateChanged: []
+            selectedDateChanged: [],
+            inputValueChanged: []
         };
 
 
@@ -50,8 +51,12 @@
             var _this = this;
 
             var i;
+
             for (i = 0; i < _this._events.selectedDateChanged.length; ++i)
                 _this._events.selectedDateChanged[i]();
+
+            for (i = 0; i < _this._events.inputValueChanged.length; ++i)
+                _this._events.inputValueChanged[i]();
         },
 
         getSelectedDate: function () {
@@ -63,6 +68,10 @@
         setSelectedDate: function (date) {
             var _this = this;
 
+            if (!date) {
+                date = new Date();
+            }
+
             _this._calendar.setSelectedDate(date);
             _this._dropDown.setText(ns.formatDate(date));
         },
@@ -71,6 +80,12 @@
             var _this = this;
 
             _this._events.selectedDateChanged.push(handler);
+        },
+
+        onInputValueChanged: function (handler) {
+            var _this = this;
+
+            _this._events.inputValueChanged.push(handler);
         },
 
         setEnabled: function (enabled) {
@@ -83,6 +98,18 @@
             var _this = this;
 
             return _this._dropDown.isEnabled();
+        },
+
+        setInputValue: function (value) {
+            var _this = this;
+
+            _this.setSelectedDate(value ? ns.parseDate(value) : null);
+        },
+
+        getInputValue: function () {
+            var _this = this;
+
+            return ns.formatDate(_this.getSelectedDate());
         },
 
         getElement: function () {

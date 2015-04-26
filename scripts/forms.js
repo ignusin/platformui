@@ -1,6 +1,10 @@
 (function (ns) {
 
     ns.getInputValue = function (input) {
+        if (input.getInputValue) {
+            return input.getInputValue();
+        }
+
         input = ns.element(input);
 
         if (input.tagName.toLowerCase() === 'input' && input.type.toLowerCase() === 'checkbox')
@@ -10,6 +14,11 @@
     };
 
     ns.setInputValue = function (input, value) {
+        if (input.setInputValue) {
+            input.setInputValue(value);
+            return;
+        }
+
         input = ns.element(input);
 
         if (input.tagName.toLowerCase() === 'input' && input.type.toLowerCase() === 'checkbox') {
@@ -27,6 +36,11 @@
     };
 
     ns.resetInputValue = function (input) {
+        if (input.setInputValue) {
+            input.setInputValue(null);
+            return;
+        }
+
         input = ns.element(input);
 
         if (input.tagName.toLowerCase() === 'input' && input.type.toLowerCase() === 'checkbox')
@@ -36,10 +50,19 @@
     };
 
     ns.setInputEnabled = function (input, enabled) {
+        if (input.setEnabled) {
+            input.setEnabled(enabled);
+            return;
+        }
+
         ns.element(input).disabled = !enabled;
     };
 
     ns.getInputEnabled = function (input) {
+        if (input.isEnabled) {
+            return input.isEnabled();
+        }
+
         return !ns.element(input).disabled;
     };
 
@@ -101,6 +124,7 @@
         this._fields = {};
         this._enabled = {};
         this._form = ns.element(form);
+        this._customControls = {};
 
         this._initObserver();
     };
@@ -135,6 +159,31 @@
                 input = this._form.elements[i];
                 this._fields[input.name] = ns.getInputValue(input);
             }
+
+            var key;
+            for (key in this._customControls) {
+                if (!this._customControls.hasOwnProperty(key)) {
+                    continue;
+                }
+
+                this._fields[key] = ns.getInputValue(this._customControls[key]);
+            }
+        },
+
+        _customControl_OnChange: function (name) {
+            this._fields[name] = ns.getInputValue(this._customControls[name]);
+        },
+
+        addCustomControl: function (name, control) {
+            var _this = this;
+
+            _this._customControls[name] = control;
+            _this._fields[name] = ns.getInputValue(control);
+            _this._enabled[name] = control.isEnabled();
+
+            control.onInputValueChanged(
+                function () { _this._customControl_OnChange(name); }
+            );
         },
 
         reset: function () {
@@ -147,6 +196,15 @@
                 ns.resetInputValue(input);
 
                 this._fields[input.name] = '';
+            }
+
+            var key;
+            for (key in this._customControls) {
+                if (!this._customControls.hasOwnProperty(key)) {
+                    continue;
+                }
+
+                ns.resetInputValue(this._customControls[key]);
             }
         },
 
@@ -166,6 +224,11 @@
                     return;
                 }
             }
+
+            if (this._customControls[name]) {
+                ns.setInputValue(this._customControls[name], value);
+                this._fields[name] = value;
+            }
         },
 
         getValue: function (name) {
@@ -173,7 +236,7 @@
         },
 
         getInputElement: function (name) {
-            return this._form[name];
+            return this._form[name] || this._customControls[name];
         },
 
         isEnabled: function (name) {
@@ -193,6 +256,10 @@
                     return;
                 }
             }
+
+            if (this._customControls[name]) {
+                this._customControls[name].setEnabled(enabled);
+            }
         },
 
         setFormEnabled: function (enabled) {
@@ -204,11 +271,27 @@
 
                 this._enabled[input.name] = enabled;
             }
+
+            var key;
+            for (key in this._customControls) {
+                if (!this._customControls.hasOwnProperty(key)) {
+                    continue;
+                }
+
+                this._customControls[key].setEnabled(enabled);
+            }
         },
 
         getData: function () {
             this._updateFieldsData();
-            return this._fields;
+            
+            var result = {};
+            var key;
+            for (key in this._fields) {
+                ns.setValue(result, key, this._fields[key]);
+            }
+
+            return result;
         },
 
         serialize: function () {
@@ -226,16 +309,55 @@
             return s;
         },
 
-        setData: function (obj) {
-            var key;
-            var i;
+        _toFlatObject: function (rootPath, obj, flatObj) {
+            var key,
+                curPath;
+
             for (key in obj) {
+                if (!obj.hasOwnProperty(key)) {
+                    continue;
+                }
+                
+                curPath = rootPath + (rootPath ? '.' : '') + key;
+
+                if (obj[key] && typeof obj[key] === 'object') {
+                    this._toFlatObject(curPath, obj[key], flatObj);
+                }
+                else {
+                    flatObj[curPath] = obj[key];
+                }
+            }
+        },
+
+        setData: function (obj) {
+            var flatObj = {};
+            this._toFlatObject('', obj, flatObj);
+
+            var key;
+            var ccKey;
+            var i;
+            for (key in flatObj) {
                 for (i = 0; i < this._form.length; ++i) {
-                    if (key === this._form.elements[i].name) {
-                        ns.setInputValue(this._form.elements[i], obj[key]);
-                        this._fields[key] = obj[key];
+                    if (key === this._form.elements[i].name || (
+                        this._form.elements[i].name.length > key.length + 1
+                            && this._form.elements[i].name.substr(0, key.length + 1) === key + '.')
+                    ) {
+                        ns.setInputValue(this._form.elements[i], flatObj[key]);
+                        this._fields[this._form.elements[i].name] = flatObj[key];
 
                         break;
+                    }
+                }
+
+                for (ccKey in this._customControls) {
+                    if (this._customControls.hasOwnProperty(ccKey)) {
+                        if (key === ccKey || (
+                            ccKey.length > key.length + 1
+                                && ccKey.substr(0, key.length + 1) === key + '.')
+                        ) {
+                            ns.setInputValue(this._customControls[ccKey], flatObj[key]);
+                            this._fields[ccKey] = flatObj[key];
+                        }
                     }
                 }
             }
