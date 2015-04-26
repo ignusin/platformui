@@ -1,0 +1,59 @@
+﻿.PlatformUI-SpringContainer
+{
+}
+
+.PlatformUI-SpringContainer .Child
+{
+    position: absolute;
+    padding: 0;
+}
+
+.PlatformUI-SpringContainer .Child .Title
+{
+    margin: 3px 0 3px 3px;
+    padding: 8px 8px 2px 8px;
+    background-color: #e5e5e5;
+    color: #a8a8a8;
+    text-transform: uppercase;
+
+    font-size: 1em;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    overflow-x: hidden;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+.PlatformUI-SpringContainer .Child.Selected .Title
+{
+    background-color: #24B76D;
+    color: white;
+    font-weight: bold;
+}
+
+.PlatformUI-SpringContainer .Child .Body
+{
+    position: absolute;
+    top: 34px;
+    left: 3px;
+    right: 0;
+    bottom: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.PlatformUI-SpringContainer .Child .Disabled
+{
+    position: absolute;
+    left: 0;
+    top: 32px;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0.8;
+    filter: alpha(Opacity=80);
+}
